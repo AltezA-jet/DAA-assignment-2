@@ -1,0 +1,37 @@
+workload,description,variant,structure,n,time_ms,steps,moves,comparisons
+W1,Random Access get(index),-,DynamicArray,100,0.347,10000,0,0
+W1,Random Access get(index),-,MyLinkedList,100,1.959,501508,0,0
+W2,Search: 500 present, 500 absent,-,DynamicArray,100,1.103,74043,0,74043
+W2,Search: 500 present, 500 absent,-,MyLinkedList,100,0.847,73043,0,74043
+W3,Insert/Remove at Head,head,DynamicArray,100,0.313,1201120,1201120,0
+W3,Insert/Remove at Head,head,MyLinkedList,100,0.183,0,3000,0
+W3,Insert/Remove at Middle,middle,DynamicArray,100,0.484,1101120,1101120,0
+W3,Insert/Remove at Middle,middle,MyLinkedList,100,1.036,98000,3000,0
+W4,MinHeap insert + extractMin,-,MinHeap,100,0.155,1589,1384,1042
+W1,Random Access get(index),-,DynamicArray,1000,0.526,10000,0,0
+W1,Random Access get(index),-,MyLinkedList,1000,9.374,5005208,0,0
+W2,Search: 500 present, 500 absent,-,DynamicArray,1000,0.959,743598,0,743598
+W2,Search: 500 present, 500 absent,-,MyLinkedList,1000,2.692,742598,0,743598
+W3,Insert/Remove at Head,head,DynamicArray,1000,0.738,3001280,3001280,0
+W3,Insert/Remove at Head,head,MyLinkedList,1000,1.373,0,3000,0
+W3,Insert/Remove at Middle,middle,DynamicArray,1000,0.452,2001280,2001280,0
+W3,Insert/Remove at Middle,middle,MyLinkedList,1000,3.231,998000,3000,0
+W4,MinHeap insert + extractMin,-,MinHeap,1000,0.666,22730,20478,17219
+W1,Random Access get(index),-,DynamicArray,10000,0.433,10000,0,0
+W1,Random Access get(index),-,MyLinkedList,10000,197.276,50129208,0,0
+W2,Search: 500 present, 500 absent,-,DynamicArray,10000,6.589,7370727,0,7370727
+W2,Search: 500 present, 500 absent,-,MyLinkedList,10000,291.849,7369727,0,7370727
+W3,Insert/Remove at Head,head,DynamicArray,10000,1.943,21010240,21010240,0
+W3,Insert/Remove at Head,head,MyLinkedList,10000,106.785,0,3000,0
+W3,Insert/Remove at Middle,middle,DynamicArray,10000,2.108,11010240,11010240,0
+W3,Insert/Remove at Middle,middle,MyLinkedList,10000,94.195,9998000,3000,0
+W4,MinHeap insert + extractMin,-,MinHeap,10000,2.433,291965,268992,239133
+W1,Random Access get(index),-,DynamicArray,100000,2.175,10000,0,0
+W1,Random Access get(index),-,MyLinkedList,100000,9013.138,502489208,0,0
+W2,Search: 500 present, 500 absent,-,DynamicArray,100000,26.116,73728608,0,73728608
+W2,Search: 500 present, 500 absent,-,MyLinkedList,100000,8437.820,73727608,0,73728608
+W3,Insert/Remove at Head,head,DynamicArray,100000,21.862,201000000,201000000,0
+W3,Insert/Remove at Head,head,MyLinkedList,100000,7861.828,0,3000,0
+W3,Insert/Remove at Middle,middle,DynamicArray,100000,10.918,101000000,101000000,0
+W3,Insert/Remove at Middle,middle,MyLinkedList,100000,7410.847,99998000,3000,0
+W4,MinHeap insert + extractMin,-,MinHeap,100000,16.729,3650617,3420190,3059125
