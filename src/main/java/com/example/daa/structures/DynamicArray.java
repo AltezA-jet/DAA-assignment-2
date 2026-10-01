@@ -1,13 +1,17 @@
 package com.example.daa.structures;
 
+import com.example.daa.metrics.Metrics;
+
 public class DynamicArray {
 
     private int[] data;
     private int size;
+    private final Metrics metrics;
 
     public DynamicArray() {
         data = new int[10];
         size = 0;
+        metrics = new Metrics();
     }
 
     public void add(int x) {
@@ -16,6 +20,7 @@ public class DynamicArray {
         }
 
         data[size] = x;
+        metrics.incrementMoves();
         size++;
     }
 
@@ -30,9 +35,12 @@ public class DynamicArray {
 
         for (int i = size; i > index; i--) {
             data[i] = data[i - 1];
+            metrics.incrementSteps();
+            metrics.incrementMoves();
         }
 
         data[index] = x;
+        metrics.incrementMoves();
         size++;
     }
 
@@ -42,13 +50,15 @@ public class DynamicArray {
         }
 
         int removed = data[index];
+        metrics.incrementSteps();
 
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
+            metrics.incrementSteps();
+            metrics.incrementMoves();
         }
 
         size--;
-
         return removed;
     }
 
@@ -57,11 +67,15 @@ public class DynamicArray {
             throw new IndexOutOfBoundsException();
         }
 
+        metrics.incrementSteps();
         return data[index];
     }
 
     public boolean contains(int x) {
         for (int i = 0; i < size; i++) {
+            metrics.incrementSteps();
+            metrics.incrementComparisons();
+
             if (data[i] == x) {
                 return true;
             }
@@ -75,8 +89,18 @@ public class DynamicArray {
 
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
+            metrics.incrementSteps();
+            metrics.incrementMoves();
         }
 
         data = newData;
+    }
+
+    public Metrics getMetrics() {
+        return metrics;
+    }
+
+    public void resetMetrics() {
+        metrics.reset();
     }
 }
